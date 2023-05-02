@@ -1,9 +1,6 @@
-const input = document.querySelector('#font-size-control');
-const text = document.querySelector('#text');
-
-function handleFontSizeChange(event) {
-  const fontSize = event.currentTarget.value;
-  text.style.fontSize = `${fontSize}px`;
+const changerRef = document.querySelector('#font-size-control');
+const textRef = document.querySelector('#text');
+function hendlerFontChanger(event) {
+    textRef.style.fontSize = `${event.currentTarget.value}px`
 }
-
-input.addEventListener('input', handleFontSizeChange);
+changerRef.addEventListener('change', hendlerFontChanger);  

@@ -12,11 +12,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const galleryList = document.querySelector('.gallery');
+const galleryRef = document.querySelector('.gallery');
 
-const imagesMarkup = images.reduce((markup, { url, alt }) => {
-  return markup + `<li><img src="${url}" alt="${alt}"></li>`;
-}, '');
+const string = images.reduce((fullString, item) =>
+  fullString += `<li><img src=${item.url} alt="${item.alt}"></li>`
+  , '');
 
-galleryList.insertAdjacentHTML('beforeend', imagesMarkup);
-
+galleryRef.insertAdjacentHTML("afterbegin", string);
